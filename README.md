@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
 
+## Firebase Setup
+
+Make sure to add a `API_KEY.ts` file in the app folder exporting your API_KEY from firebase.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

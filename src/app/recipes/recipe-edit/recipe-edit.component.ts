@@ -28,8 +28,8 @@ export class RecipeEditComponent implements OnInit {
     });
   }
 
-  getControls() {
-    return (<FormArray>this.recipeForm.get('ingredients')).controls;
+  get ingredientControls() {
+    return (this.recipeForm.get('ingredients') as FormArray).controls;
   }
 
   private initForm() {

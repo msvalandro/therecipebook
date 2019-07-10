@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { catchError, tap } from 'rxjs/operators';
 import { throwError, BehaviorSubject } from 'rxjs';
 
-import API_KEY from '../API_KEY';
+import { environment } from '../../environments/environment';
 import { User } from './user.model';
 
 export interface AuthResponseData {
@@ -29,7 +29,9 @@ export class AuthService {
   signup(email: string, password: string) {
     return this.http
       .post<AuthResponseData>(
-        `https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=${API_KEY}`,
+        `https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=${
+          environment.firebaseAPIKey
+        }`,
         {
           email: email,
           password: password,
